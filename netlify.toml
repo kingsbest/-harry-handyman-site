@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+# Static HTML site — no build step needed.
+# The contact form uses Netlify Forms (data-netlify="true").
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
