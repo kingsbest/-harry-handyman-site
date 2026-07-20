@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Handyman Services in Gower | Harry Handyman Service</title>
+<meta name="description" content="Handyman Services in Gower — flat-rate pricing in £, fully insured, trusted local team. Free quotes across South West Wales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',system-ui,sans-serif;color:#1c1c1e;background:#f5efe6;-webkit-font-smoothing:antialiased}
+  a{color:#D86E28;text-decoration:none}
+  a:hover{color:#B85A1E}
+  img{display:block;max-width:100%}
+  input,select,textarea,button{font-family:inherit}
+  .hh-wrap{max-width:1560px;margin:0 auto;padding:0 48px}
+  .hh-ticks{height:26px;background-repeat:repeat-x,repeat-x;background-size:100% 11px,100% 22px;background-position:bottom left,bottom left;background-image:repeating-linear-gradient(90deg,currentColor 0 1.5px,transparent 1.5px 18px),repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 90px)}
+  .hh-ruler{height:36px;background-color:#34363a;background-repeat:no-repeat,repeat-x,repeat-x;background-size:100% 2px,100% 12px,100% 24px;background-position:top left,top left,top left;background-image:linear-gradient(#e3cfb4,#e3cfb4),repeating-linear-gradient(90deg,#e3cfb4 0 1.5px,transparent 1.5px 22px),repeating-linear-gradient(90deg,#e3cfb4 0 2px,transparent 2px 110px)}
+  .hh-nav-links{display:flex;gap:28px;align-items:center}
+  .hh-hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:52px;align-items:center}
+  .hh-hero-portrait{position:relative;min-height:560px;align-self:stretch}
+  .hh-workstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .hh-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .hh-areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;text-align:left;margin-top:40px}
+  .hh-services-grid5{display:grid;grid-template-columns:repeat(5,1fr);row-gap:52px;column-gap:8px}
+  .hh-svc-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:22px 14px;border-radius:6px;transition:background 0.15s ease}
+  .hh-svc-item:hover{background:#45484d}
+  .hh-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .hh-why-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:52px;align-items:center}
+  .hh-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .hh-tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .hh-contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:52px;align-items:start}
+  .hh-promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .hh-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr 1fr 1.15fr;gap:36px;align-items:start}
+  .hh-form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .hh-menu-btn{display:none}
+  .hh-mobile-menu{display:none}
+  .hh-bottombar{display:none}
+  @media(max-width:980px){
+    .hh-nav-links{display:none}
+    .hh-menu-btn{display:flex}
+    .hh-hero-grid{grid-template-columns:1fr;gap:34px}
+    .hh-why-grid{grid-template-columns:1fr;gap:30px}
+    .hh-contact-grid{grid-template-columns:1fr;gap:32px}
+    .hh-services-grid{grid-template-columns:repeat(2,1fr)}
+    .hh-services-grid5{grid-template-columns:repeat(3,1fr)}
+    .hh-reviews-grid{grid-template-columns:1fr}
+    .hh-tips-grid{grid-template-columns:1fr}
+    .hh-footer-grid{grid-template-columns:1fr 1fr}
+    .hh-footer-photo{grid-column:1 / -1;max-width:340px;margin-left:auto;margin-right:auto}
+    .hh-promise-grid{grid-template-columns:repeat(2,1fr)}
+    .hh-bottombar{display:flex}
+    body{padding-bottom:66px}
+    .hh-mobile-menu.open{display:block}
+    .hh-workstrip{grid-template-columns:repeat(2,1fr)}
+    .hh-hero-portrait{min-height:470px;max-width:420px;width:100%;margin:10px auto 0}
+  }
+  @media(max-width:560px){
+    .hh-services-grid{grid-template-columns:1fr}
+    .hh-services-grid5{grid-template-columns:repeat(2,1fr)}
+    .hh-work-grid{grid-template-columns:repeat(2,1fr)}
+    .hh-footer-grid{grid-template-columns:1fr}
+    .hh-areas-grid{grid-template-columns:1fr;gap:28px}
+    .hh-form-row{grid-template-columns:1fr}
+    .hh-promise-grid{grid-template-columns:1fr}
+  }
+
+  .hh-drop{position:relative}
+  .hh-drop-menu{position:absolute;top:100%;left:0;min-width:238px;background:#3a3c40;border:1px solid rgba(245,239,230,0.12);border-top:2px solid #D86E28;box-shadow:0 14px 32px rgba(0,0,0,0.42);padding:8px 0;display:none;z-index:70}
+  .hh-drop:hover .hh-drop-menu{display:block}
+  .hh-drop-menu a{display:block;padding:9px 20px;color:#e6e1d8;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;letter-spacing:0.02em;text-transform:uppercase;white-space:nowrap}
+  .hh-drop-menu a:hover{background:#45484d;color:#fff}
+  .hh-msub{display:none;padding:2px 0 8px 16px}
+  .hh-msub.open{display:block}
+  [id]{scroll-margin-top:172px}
+</style>
+<script src="./image-slot.js"></script>
+<script type="application/ld+json" data-ld="localbusiness">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "GeneralContractor",
+    "HomeAndConstructionBusiness"
+  ],
+  "@id": "https://harryhandyman.com/#business",
+  "name": "Harry Handyman Service",
+  "description": "Owner-run handyman and renovation service with flat-rate pricing in £, fully insured, based in Carmarthenshire and covering South West Wales.",
+  "url": "https://harryhandyman.com",
+  "telephone": "[YOUR PHONE]",
+  "email": "[YOUR EMAIL]",
+  "image": "https://harryhandyman.com/uploads/Harry-logo.png",
+  "logo": "https://harryhandyman.com/uploads/Harry-logo.png",
+  "priceRange": "££",
+  "currenciesAccepted": "GBP",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Carmarthenshire",
+    "addressCountry": "GB"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Carmarthenshire"
+    },
+    {
+      "@type": "City",
+      "name": "Swansea"
+    },
+    {
+      "@type": "Place",
+      "name": "Gower"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Pembrokeshire"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "06:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" data-ld="faqpage">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much do handyman jobs cost in Gower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We quote a flat price in £ for the job or the list — agreed before we start, so there are no hourly surprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you do several small jobs in one visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — send us your list and we'll cover as much as possible in one visit, for one flat price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you charge by the hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We work to a clear flat rate agreed up front so you always know the cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — fully insured for homes and commercial, and our work is guaranteed."
+      }
+    }
+  ]
+}
+</script>
+</helmet>
+
+<div style="background:#f5efe6">
+<header style="position:sticky;top:0;z-index:60;box-shadow:0 3px 16px rgba(0,0,0,0.28)">
+    <div style="background:#1c1c1e;color:#c9c3b8">
+      <div class="hh-wrap" style="display:flex;justify-content:space-between;align-items:center;gap:12px 26px;flex-wrap:wrap;min-height:40px;padding-top:6px;padding-bottom:6px;font-family:'Barlow Condensed',sans-serif;font-size:14.5px;letter-spacing:0.04em;text-transform:uppercase">
+        <span style="display:inline-flex;align-items:center;gap:8px"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#D86E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Fully Insured &middot; Free Quotes</span>
+        <div style="display:flex;align-items:center;gap:14px 26px;flex-wrap:wrap">
+          <a href="#" style="color:#c9c3b8;display:inline-flex;align-items:center;gap:7px" style-hover="color:#f5efe6"><svg viewBox="0 0 24 24" width="14" height="14" fill="#D86E28" stroke="none"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"></path></svg>Leave us a review on Google</a>
+          <a href="tel:[YOUR PHONE]" style="color:#f5efe6;font-weight:600;display:inline-flex;gap:7px;align-items:center"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#D86E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Request your free quote: <span style="color:#D86E28">[YOUR PHONE]</span></a>
+        </div>
+      </div>
+    </div>
+    <div style="height:3px;background:#D86E28"></div>
+    <div style="background:#34363a">
+      <div class="hh-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px">
+        <a href="Harry Handyman Service.dc.html" style="display:flex;align-items:center"><img src="uploads/Harry-logo-transparent.png" alt="Harry Handyman Service" style="height:60px;width:auto"></a>
+        <nav class="hh-nav-links">
+          <div class="hh-drop"><a href="handyman-services.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">Handyman Services <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="handyman-services.dc.html#general-repairs">General Repairs</a><a href="handyman-services.dc.html#carpentry">Carpentry &amp; Joinery</a><a href="handyman-services.dc.html#painting">Painting &amp; Decorating</a><a href="handyman-services.dc.html#plumbing">Plumbing</a><a href="handyman-services.dc.html#tiling">Tiling &amp; Flooring</a><a href="handyman-services.dc.html#flatpack">Flat-pack &amp; Mounting</a><a href="handyman-services.dc.html#maintenance">Property Maintenance</a><a href="handyman-services-haverfordwest.dc.html">Handyman &middot; Haverfordwest</a><a href="painting-decorating-llanelli.dc.html">Painting &middot; Llanelli</a></div></div>
+          <div class="hh-drop"><a href="renovations.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">Renovations <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="renovations.dc.html#kitchens">Kitchens</a><a href="renovations.dc.html#bathrooms">Bathrooms</a><a href="renovations.dc.html#full-renovations">Full Renovations</a><a href="renovations.dc.html#commercial">Commercial Fit-outs</a><a href="bathroom-renovations-swansea.dc.html">Bathroom Renovations &middot; Swansea</a><a href="kitchen-renovations-carmarthen.dc.html">Kitchen Renovations &middot; Carmarthen</a></div></div>
+          <a href="our-work.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer" style-hover="color:#D86E28">Our Work</a>
+          <div class="hh-drop"><a href="areas.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">Areas <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="areas.dc.html#carmarthenshire">Carmarthenshire</a><a href="areas.dc.html#swansea-gower">Swansea &amp; Gower</a><a href="areas.dc.html#pembrokeshire">Pembrokeshire</a></div></div>
+          <div class="hh-drop"><a href="about.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">About <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="about.dc.html#team">Why Harry &amp; Our Team</a><a href="about.dc.html#reviews">Reviews</a><a href="faq.dc.html">FAQ</a></div></div>
+          <a href="tips.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer" style-hover="color:#D86E28">Tips</a>
+          <a href="contact.dc.html" style="background:#D86E28;color:#1c1c1e;padding:12px 24px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:0.03em;text-transform:uppercase" style-hover="background:#B85A1E">Contact Us</a>
+        </nav>
+        <button class="hh-menu-btn" onClick="{{ toggleMenu }}" aria-label="Menu" style="background:#45484d;border:none;width:46px;height:46px;border-radius:4px;cursor:pointer;align-items:center;justify-content:center">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#e3cfb4" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+      <div class="hh-mobile-menu {{ menuClass }}" style="border-top:1px solid rgba(245,239,230,0.12);background:#34363a">
+        <div class="hh-wrap" style="display:flex;flex-direction:column;padding-top:8px;padding-bottom:18px;font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase">
+          <div>
+          <div onClick="{{ toggleHandyman }}" style="display:flex;justify-content:space-between;align-items:center;color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12);cursor:pointer">Handyman Services<span style="font-size:12px">&#9662;</span></div>
+          <div class="hh-msub {{ mobHandymanClass }}">
+            <a href="handyman-services.dc.html#general-repairs" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">General Repairs</a>
+            <a href="handyman-services.dc.html#carpentry" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Carpentry &amp; Joinery</a>
+            <a href="handyman-services.dc.html#painting" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Painting &amp; Decorating</a>
+            <a href="handyman-services.dc.html#plumbing" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Plumbing</a>
+            <a href="handyman-services.dc.html#tiling" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Tiling &amp; Flooring</a>
+            <a href="handyman-services.dc.html#flatpack" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Flat-pack &amp; Mounting</a>
+            <a href="handyman-services.dc.html#maintenance" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Property Maintenance</a><a href="handyman-services-haverfordwest.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Handyman &middot; Haverfordwest</a><a href="painting-decorating-llanelli.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Painting &middot; Llanelli</a>
+          </div>
+        </div>
+          <div>
+          <div onClick="{{ toggleReno }}" style="display:flex;justify-content:space-between;align-items:center;color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12);cursor:pointer">Renovations<span style="font-size:12px">&#9662;</span></div>
+          <div class="hh-msub {{ mobRenoClass }}">
+            <a href="renovations.dc.html#kitchens" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Kitchens</a>
+            <a href="renovations.dc.html#bathrooms" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Bathrooms</a>
+            <a href="renovations.dc.html#full-renovations" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Full Renovations</a>
+            <a href="renovations.dc.html#commercial" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Commercial Fit-outs</a><a href="bathroom-renovations-swansea.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Bathroom Renovations &middot; Swansea</a><a href="kitchen-renovations-carmarthen.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Kitchen Renovations &middot; Carmarthen</a>
+          </div>
+        </div>
+          <a href="our-work.dc.html" onClick="{{ closeMenu }}" style="color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12)">Our Work</a>
+          <div>
+          <div onClick="{{ toggleAreas }}" style="display:flex;justify-content:space-between;align-items:center;color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12);cursor:pointer">Areas<span style="font-size:12px">&#9662;</span></div>
+          <div class="hh-msub {{ mobAreasClass }}">
+            <a href="areas.dc.html#carmarthenshire" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Carmarthenshire</a>
+            <a href="areas.dc.html#swansea-gower" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Swansea &amp; Gower</a>
+            <a href="areas.dc.html#pembrokeshire" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Pembrokeshire</a>
+          </div>
+        </div>
+          <div>
+          <div onClick="{{ toggleAbout }}" style="display:flex;justify-content:space-between;align-items:center;color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12);cursor:pointer">About<span style="font-size:12px">&#9662;</span></div>
+          <div class="hh-msub {{ mobAboutClass }}">
+            <a href="about.dc.html#team" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Why Harry &amp; Our Team</a>
+            <a href="about.dc.html#reviews" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Reviews</a>
+            <a href="faq.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">FAQ</a>
+          </div>
+        </div>
+          <a href="tips.dc.html" onClick="{{ closeMenu }}" style="color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12)">Tips</a>
+          <a href="contact.dc.html" onClick="{{ closeMenu }}" style="background:#D86E28;color:#1c1c1e;padding:13px 0;border-radius:3px;text-align:center;margin-top:12px">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="hh-ruler"></div>
+  </header>
+  <div style="background:#f5efe6;border-bottom:1px solid rgba(28,28,30,0.08)"><div class="hh-wrap" style="padding-top:14px;padding-bottom:14px;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;color:#7a736a"><a href="Harry Handyman Service.dc.html" style="color:#7a736a">Home</a> <span style="color:#c3b8a8">/</span> <a href="handyman-services.dc.html" style="color:#7a736a">Handyman Services</a> <span style="color:#c3b8a8">/</span> <span style="color:#34363a">Handyman Services &middot; Gower</span></div></div>
+  <section style="position:relative;overflow:hidden;background:#2b2d31;color:#f5efe6">
+    <div style="position:absolute;inset:0;z-index:0"><image-slot id="handyman-gower-herobg" shape="rect" fit="cover" placeholder="Optional — background photo of Handyman Services in Gower"></image-slot></div>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(28,28,30,0.86) 0%,rgba(28,28,30,0.7) 45%,rgba(28,28,30,0.94) 100%)"></div>
+    <div class="hh-wrap" style="position:relative;z-index:2;padding-top:70px;padding-bottom:80px;max-width:900px">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#e3cfb4;margin-bottom:14px">South West Wales &middot; Flat-Rate Pricing</div>
+      <h1 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5.2vw,66px);line-height:1.05;text-transform:uppercase;color:#D86E28">Handyman Services in Gower</h1>
+      <p style="font-size:19px;line-height:1.55;color:#f5efe6;margin-top:20px;max-width:620px">Repairs, carpentry, flat-pack, mounting and odd jobs across Gower and Swansea — one trusted local team, one clear flat price.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:30px">
+        <a href="contact.dc.html" style="background:#D86E28;color:#1c1c1e;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 34px;border-radius:3px" style-hover="background:#B85A1E">Get a free quote</a>
+        <a href="our-work.dc.html" style="border:2px solid rgba(245,239,230,0.6);color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 34px;border-radius:3px" style-hover="border-color:#D86E28;color:#D86E28">See our work</a>
+      </div>
+      <div class="hh-ticks" style="color:#D86E28;margin-top:30px;max-width:430px;height:18px"></div>
+    </div>
+  </section>
+  <section style="background:#f5efe6;padding-top:64px;padding-bottom:20px"><div class="hh-wrap" style="max-width:820px;text-align:center"><p style="font-size:20px;line-height:1.65;color:#45484d">Need a reliable handyman in Gower? Harry Handyman Service covers repairs, carpentry, mounting and the jobs on your list — with flat-rate pricing in £ agreed up front, not by the hour. A trusted local team means your Gower handyman jobs get booked in quickly and done tidily.</p></div></section>
+  <section style="background:#f5efe6;padding-top:52px;padding-bottom:64px"><div class="hh-wrap">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,40px);text-transform:uppercase;color:#34363a;text-align:center;margin-bottom:34px">What's included</h2>
+      <ul style="list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 30px;max-width:900px;margin:0 auto"><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>General repairs &amp; fixes</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Doors, locks &amp; handles</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Flat-pack &amp; furniture</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>TVs, mirrors &amp; shelves</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Curtain &amp; blind fitting</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Minor plumbing</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Fence &amp; gate repairs</li><li style="display:flex;gap:12px;align-items:flex-start;font-size:16.5px;color:#45484d;line-height:1.5"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"></path></svg>Your odd-jobs list, ticked off</li></ul>
+    </div></section>
+  <div class="hh-ruler"></div>
+  <section style="background:#34363a;color:#f5efe6;padding-top:70px;padding-bottom:76px"><div class="hh-wrap">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;color:#f5efe6;text-align:center;margin-bottom:40px">How it works</h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px"><div style="background:#3f4145;border-top:3px solid #D86E28;border-radius:5px;padding:26px 22px"><div style="font-family:'Anton',sans-serif;font-size:40px;color:#D86E28;line-height:1">1</div><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#f5efe6;margin:8px 0 8px">Free quote</h3><p style="font-size:14.5px;line-height:1.55;color:#c9c3b8">Tell us about the job — we visit or work from your photos and measurements.</p></div><div style="background:#3f4145;border-top:3px solid #D86E28;border-radius:5px;padding:26px 22px"><div style="font-family:'Anton',sans-serif;font-size:40px;color:#D86E28;line-height:1">2</div><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#f5efe6;margin:8px 0 8px">Agree a flat price</h3><p style="font-size:14.5px;line-height:1.55;color:#c9c3b8">You get one clear price in £ up front. No hourly rates, no creeping bills.</p></div><div style="background:#3f4145;border-top:3px solid #D86E28;border-radius:5px;padding:26px 22px"><div style="font-family:'Anton',sans-serif;font-size:40px;color:#D86E28;line-height:1">3</div><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#f5efe6;margin:8px 0 8px">We do the work</h3><p style="font-size:14.5px;line-height:1.55;color:#c9c3b8">A trusted local team, on time and tidy — dust sheets down, mess cleared.</p></div><div style="background:#3f4145;border-top:3px solid #D86E28;border-radius:5px;padding:26px 22px"><div style="font-family:'Anton',sans-serif;font-size:40px;color:#D86E28;line-height:1">4</div><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#f5efe6;margin:8px 0 8px">Job done &amp; guaranteed</h3><p style="font-size:14.5px;line-height:1.55;color:#c9c3b8">Finished to a high standard, fully insured and backed by our guarantee.</p></div></div>
+    </div></section>
+  <section style="background:#f5efe6;padding-top:70px;padding-bottom:76px"><div class="hh-wrap">
+      <div style="text-align:center;max-width:640px;margin:0 auto 34px"><div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D86E28;margin-bottom:12px">Recent Work</div><h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;color:#34363a">Handyman Services in Gower</h2></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:0 auto">
+        <div style="position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden"><image-slot id="handyman-gower-before" shape="rect" placeholder="Before photo"></image-slot><div style="position:absolute;top:12px;left:12px;background:rgba(28,28,30,0.82);color:#e3cfb4;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:5px 10px;border-radius:3px">Before</div></div>
+        <div style="position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden"><image-slot id="handyman-gower-after" shape="rect" placeholder="After photo"></image-slot><div style="position:absolute;top:12px;right:12px;background:#D86E28;color:#1c1c1e;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:5px 10px;border-radius:3px">After</div></div>
+      </div>
+      <div style="text-align:center;margin-top:30px"><a href="our-work.dc.html" style="display:inline-block;background:#34363a;color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:14px 36px;border-radius:3px" style-hover="background:#1c1c1e">See more of our work</a></div>
+    </div></section>
+  <div style="height:3px;background:#D86E28"></div>
+  <section style="background:#34363a;color:#f5efe6;padding-top:52px;padding-bottom:56px"><div class="hh-wrap">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(24px,3vw,34px);text-transform:uppercase;text-align:center;margin-bottom:34px">Why choose Harry</h2>
+      <div class="hh-promise-grid"><div style="text-align:center"><div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#D86E28">Flat-Rate Pricing</div><p style="font-size:14px;line-height:1.45;color:#c9c3b8;margin-top:8px;max-width:210px;margin-left:auto;margin-right:auto">One clear price in £ before we start</p></div><div style="text-align:center"><div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#D86E28">Fully Insured</div><p style="font-size:14px;line-height:1.45;color:#c9c3b8;margin-top:8px;max-width:210px;margin-left:auto;margin-right:auto">Homes &amp; commercial, fully covered</p></div><div style="text-align:center"><div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#D86E28">Trusted Local Team</div><p style="font-size:14px;line-height:1.45;color:#c9c3b8;margin-top:8px;max-width:210px;margin-left:auto;margin-right:auto">Led by Harry, backed by a reliable team</p></div><div style="text-align:center"><div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#D86E28">Tidy &amp; Reliable</div><p style="font-size:14px;line-height:1.45;color:#c9c3b8;margin-top:8px;max-width:210px;margin-left:auto;margin-right:auto">On time, clean finish, every time</p></div></div>
+    </div></section>
+  <div style="height:3px;background:#D86E28"></div>
+  <section style="background:#e3cfb4;padding-top:66px;padding-bottom:70px"><div class="hh-wrap">
+      <div style="text-align:center;max-width:640px;margin:0 auto 36px"><div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-bottom:12px">Reviews</div><h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;color:#34363a">What Gower says</h2><p style="font-size:13.5px;color:#7a6a52;margin-top:10px;font-style:italic">Example reviews — replace with your own.</p></div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto"><div style="background:#f5efe6;border-radius:6px;padding:28px 26px;box-shadow:0 10px 26px rgba(28,28,30,0.1)"><div style="display:flex;gap:3px;margin-bottom:14px">{{ stars }}</div><p style="font-size:16px;line-height:1.6;color:#34363a">"Harry sorted a whole list of jobs around our Gower house in one visit. One fair flat price and everything done properly."</p><div style="margin-top:18px;font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#1c1c1e">Emma P. <span style="color:#B0603F">&middot; Gower</span></div></div><div style="background:#f5efe6;border-radius:6px;padding:28px 26px;box-shadow:0 10px 26px rgba(28,28,30,0.1)"><div style="display:flex;gap:3px;margin-bottom:14px">{{ stars }}</div><p style="font-size:16px;line-height:1.6;color:#34363a">"Quick to respond and no hourly-rate games — just a clear price and tidy work."</p><div style="margin-top:18px;font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#1c1c1e">Tom H. <span style="color:#B0603F">&middot; Mumbles</span></div></div></div>
+    </div></section>
+  <section style="background:#f5efe6;padding-top:70px;padding-bottom:76px"><div class="hh-wrap" style="max-width:820px">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;color:#34363a;text-align:center;margin-bottom:34px">Frequently asked</h2>
+      <div style="display:flex;flex-direction:column;gap:14px"><div style="background:#fff;border:1px solid rgba(28,28,30,0.08);border-left:3px solid #D86E28;border-radius:5px;padding:22px 24px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;color:#1c1c1e;margin-bottom:8px">How much do handyman jobs cost in Gower?</h3><p style="font-size:15.5px;line-height:1.6;color:#5a5c61">We quote a flat price in £ for the job or the list — agreed before we start, so there are no hourly surprises.</p></div><div style="background:#fff;border:1px solid rgba(28,28,30,0.08);border-left:3px solid #D86E28;border-radius:5px;padding:22px 24px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;color:#1c1c1e;margin-bottom:8px">Can you do several small jobs in one visit?</h3><p style="font-size:15.5px;line-height:1.6;color:#5a5c61">Yes — send us your list and we'll cover as much as possible in one visit, for one flat price.</p></div><div style="background:#fff;border:1px solid rgba(28,28,30,0.08);border-left:3px solid #D86E28;border-radius:5px;padding:22px 24px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;color:#1c1c1e;margin-bottom:8px">Do you charge by the hour?</h3><p style="font-size:15.5px;line-height:1.6;color:#5a5c61">No. We work to a clear flat rate agreed up front so you always know the cost.</p></div><div style="background:#fff;border:1px solid rgba(28,28,30,0.08);border-left:3px solid #D86E28;border-radius:5px;padding:22px 24px"><h3 style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.01em;color:#1c1c1e;margin-bottom:8px">Are you insured?</h3><p style="font-size:15.5px;line-height:1.6;color:#5a5c61">Yes — fully insured for homes and commercial, and our work is guaranteed.</p></div></div>
+    </div></section>
+  <div class="hh-ruler"></div>
+  <section style="background:#f5efe6;padding-top:20px;padding-bottom:76px"><div class="hh-wrap" style="text-align:center">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(24px,3vw,34px);text-transform:uppercase;color:#34363a">Areas we cover for Handyman Services</h2>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px;max-width:820px;margin-left:auto;margin-right:auto"><span style="background:#D86E28;border:1px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#1c1c1e">Gower</span><a href="contact.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Mumbles</a><a href="contact.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Swansea</a><a href="contact.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Gorseinon</a><a href="contact.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Reynoldston</a><a href="contact.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Llanmadoc</a></div>
+      <p style="font-size:15px;color:#5a5c61;margin-top:20px">Don't see your town? <a href="contact.dc.html" style="font-weight:600">Just ask</a> — chances are you're covered.</p>
+      <div style="margin-top:40px;padding-top:30px;border-top:1px solid rgba(28,28,30,0.1)"><div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#7a736a;margin-bottom:16px">More local pages</div><div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px"><a href="bathroom-renovations-swansea.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Bathroom Renovations · Swansea</a><a href="kitchen-renovations-carmarthen.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Kitchen Renovations · Carmarthen</a><a href="painting-decorating-llanelli.dc.html" style="background:#fff;border:1px solid rgba(28,28,30,0.1);border-left:3px solid #D86E28;padding:9px 15px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#34363a;text-decoration:none">Painting · Llanelli</a></div></div>
+    </div></section>
+  <div style="height:3px;background:#D86E28"></div>
+  <section style="background:#D86E28;color:#1c1c1e;padding-top:64px;padding-bottom:68px"><div class="hh-wrap" style="text-align:center">
+      <h2 style="font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(28px,3.8vw,46px);text-transform:uppercase;color:#1c1c1e">Handyman Services in Gower? Get a flat-rate quote</h2>
+      <p style="font-size:18px;line-height:1.5;color:#3a2a1c;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto">One clear price in £ before we lift a tool. Call, WhatsApp or send us the details.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:26px">
+        <a href="tel:[YOUR PHONE]" style="background:#1c1c1e;color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 32px;border-radius:3px">Call [YOUR PHONE]</a>
+        <a href="https://wa.me/[YOUR NUMBER]" style="background:#34363a;color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 32px;border-radius:3px">WhatsApp</a>
+        <a href="contact.dc.html" style="background:#f5efe6;color:#1c1c1e;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.03em;text-transform:uppercase;padding:15px 32px;border-radius:3px">Get a quote</a>
+      </div>
+    </div></section>
+<!-- FOOTER -->
+  <footer style="background:#1c1c1e;color:#c9c3b8;padding-top:56px;padding-bottom:34px">
+    <div class="hh-wrap">
+      <div class="hh-footer-grid">
+        <div>
+          <img src="uploads/Harry-logo.png" alt="Harry Handyman Service" style="height:96px;width:auto;border-radius:4px;margin-bottom:18px">
+          <p style="font-size:15.5px;line-height:1.6;max-width:320px;color:#a7a29a">A trusted local team — from a dripping tap to a full renovation. Owner-run, fully insured, based in Carmarthenshire and covering South West Wales.</p>
+          <div style="display:flex;gap:12px;margin-top:20px">
+            <a href="#" aria-label="Facebook" style="width:40px;height:40px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="#e3cfb4"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.8 1.9-1.8H17V2.1C16.6 2.1 15.3 2 13.9 2 10.9 2 9 3.7 9 6.9V10H6v4h3v8z"></path></svg></a>
+            <a href="#" aria-label="Instagram" style="width:40px;height:40px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e3cfb4" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#e3cfb4" stroke="none"></circle></svg></a>
+            <a href="#" aria-label="WhatsApp" style="width:40px;height:40px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e3cfb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+            <a href="#" aria-label="Leave us a review on Google" title="Leave us a review on Google" style="width:40px;height:40px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 48 48" width="22" height="22"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f5efe6;margin-bottom:16px">Services</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px">
+            <li><a href="handyman-services.dc.html#general-repairs" style="color:#a7a29a">General Repairs</a></li>
+            <li><a href="handyman-services.dc.html#carpentry" style="color:#a7a29a">Carpentry &amp; Joinery</a></li>
+            <li><a href="handyman-services.dc.html#painting" style="color:#a7a29a">Painting &amp; Decorating</a></li>
+            <li><a href="renovations.dc.html#kitchens" style="color:#a7a29a">Kitchens &amp; Bathrooms</a></li>
+            <li><a href="renovations.dc.html#full-renovations" style="color:#a7a29a">Full Renovations</a></li>
+            <li><a href="handyman-services.dc.html#maintenance" style="color:#a7a29a">Property Maintenance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f5efe6;margin-bottom:16px">Handyman Services In</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px">
+            <li><a href="handyman-carmarthen.dc.html" style="color:#a7a29a">Handyman in Carmarthen</a></li>
+            <li><a href="handyman-llanelli.dc.html" style="color:#a7a29a">Handyman in Llanelli</a></li>
+            <li><a href="handyman-ammanford.dc.html" style="color:#a7a29a">Handyman in Ammanford</a></li>
+            <li><a href="handyman-swansea.dc.html" style="color:#a7a29a">Handyman in Swansea</a></li>
+            <li><a href="handyman-gower.dc.html" style="color:#a7a29a">Handyman in Gower</a></li>
+            <li><a href="handyman-services-haverfordwest.dc.html" style="color:#a7a29a">Handyman in Haverfordwest</a></li>
+            <li><a href="handyman-pembroke.dc.html" style="color:#a7a29a">Handyman in Pembroke</a></li>
+            <li><a href="handyman-fishguard.dc.html" style="color:#a7a29a">Handyman in Fishguard</a></li>
+            <li><a href="handyman-tenby.dc.html" style="color:#a7a29a">Handyman in Tenby</a></li>
+            <li style="margin-top:2px"><span style="color:#7d7970;font-style:italic">and surrounding areas</span></li>
+            <li style="margin-top:6px"><a href="areas.dc.html" style="color:#D86E28;font-weight:600">View all areas &rarr;</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f5efe6;margin-bottom:16px">Contact</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px">
+            <li><a href="tel:[YOUR PHONE]" style="color:#a7a29a">[YOUR PHONE]</a></li>
+            <li><a href="https://wa.me/[YOUR NUMBER]" style="color:#a7a29a">WhatsApp: [YOUR NUMBER]</a></li>
+            <li><a href="mailto:[YOUR EMAIL]" style="color:#a7a29a">[YOUR EMAIL]</a></li>
+            <li style="color:#a7a29a">Carmarthenshire · South West Wales</li>
+            <li><a href="https://harryhandyman.com" style="color:#D86E28;font-weight:600">harryhandyman.com</a></li>
+          </ul>
+        </div>
+        <div class="hh-footer-photo">
+          <div style="border-radius:8px;overflow:hidden;position:relative;aspect-ratio:4/5;background:#242427;border:1px solid rgba(245,239,230,0.08)">
+            <image-slot id="footer-team-photo" shape="rect" fit="cover" placeholder="REPLACE THIS — add a real photo of Harry, the team or the van"></image-slot>
+          </div>
+          <div style="font-size:12px;line-height:1.4;color:#7d7970;margin-top:10px;font-style:italic">Photo placeholder — drop in a real team or van photo here.</div>
+        </div>
+      </div>
+      <div style="height:1px;background:#34363a;margin:34px 0 20px"></div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase;color:#7d7970">
+        <span>© {{ year }} Harry Handyman Service. All rights reserved.</span>
+        <span>Fully Insured · Flat-Rate Pricing · Homes &amp; Commercial · South West Wales.</span>
+      </div>
+      <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:0.05em;text-transform:uppercase">
+        <a href="privacy-policy.dc.html" style="color:#a7a29a">Privacy Policy</a>
+        <span style="color:#4a4b4f">·</span>
+        <a href="#" style="color:#a7a29a">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+<!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="hh-bottombar" style="position:fixed;bottom:0;left:0;right:0;z-index:60;background:#1c1c1e;border-top:2px solid #D86E28;height:64px;box-shadow:0 -6px 20px rgba(0,0,0,0.3)">
+    <a href="tel:[YOUR PHONE]" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#e3cfb4;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border-right:1px solid #34363a">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call
+    </a>
+    <a href="https://wa.me/[YOUR NUMBER]" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#e3cfb4;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border-right:1px solid #34363a">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#D86E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      WhatsApp
+    </a>
+    <a href="contact.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:#D86E28;color:#1c1c1e;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1c1c1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 13h6M9 17h4"></path></svg>
+      Get a Quote
+    </a>
+  </div>
+
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { menuOpen:false, drop:{}, pos:50, dragging:false };
+  containerRef = React.createRef();
+  componentDidMount(){
+    this._move=(e)=>{ if(!this.state.dragging) return; if(e.cancelable) e.preventDefault(); this._update(e); };
+    this._up=()=>{ if(this.state.dragging) this.setState({dragging:false}); };
+    window.addEventListener('pointermove',this._move,{passive:false});
+    window.addEventListener('pointerup',this._up);
+  }
+  componentWillUnmount(){ window.removeEventListener('pointermove',this._move); window.removeEventListener('pointerup',this._up); }
+  _update(e){ const el=this.containerRef.current; if(!el) return; const r=el.getBoundingClientRect(); const x=(e.clientX!=null?e.clientX:0)-r.left; const pct=Math.max(0,Math.min(100,(x/r.width)*100)); this.setState({pos:pct}); }
+  _td(k){ this.setState(s=>{ const d=Object.assign({},s.drop); d[k]=!d[k]; return {drop:d}; }); }
+  renderVals(){
+    const pos=this.state.pos; const d=this.state.drop;
+    const stars=React.createElement(React.Fragment,null,[0,1,2,3,4].map(i=>React.createElement('svg',{key:i,viewBox:'0 0 24 24',width:18,height:18,fill:'#D86E28'},React.createElement('path',{d:'M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z'}))));
+    return {
+      menuClass:this.state.menuOpen?'open':'',
+      toggleMenu:()=>this.setState(s=>({menuOpen:!s.menuOpen})),
+      closeMenu:()=>this.setState({menuOpen:false}),
+      toggleHandyman:()=>this._td('handyman'),
+      toggleReno:()=>this._td('reno'),
+      toggleAreas:()=>this._td('areas'),
+      toggleAbout:()=>this._td('about'),
+      mobHandymanClass:d.handyman?'open':'',
+      mobRenoClass:d.reno?'open':'',
+      mobAreasClass:d.areas?'open':'',
+      mobAboutClass:d.about?'open':'',
+      handleLeft:pos+'%',
+      clipStyle:'inset(0 '+(100-pos)+'% 0 0)',
+      containerRef:this.containerRef,
+      startDrag:(e)=>{ this.setState({dragging:true}); this._update(e); },
+      stars,
+      year:new Date().getFullYear(),
+      onSubmit:(e)=>{ e.preventDefault(); alert('Thanks — your request has been noted. (Demo form: connect this to your email or a form service to receive real enquiries.)'); }
+    };
+  }
+}
+</script>
+</body>
+</html>
