@@ -40,6 +40,14 @@
   status = 301
   force = true
 
+# Netlify has no built-in MIME type for .webmanifest and falls back to
+# application/octet-stream, which the spec disallows. Combined with the
+# nosniff header below, that stops the manifest being applied.
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
 [[headers]]
   for = "/*"
   [headers.values]
