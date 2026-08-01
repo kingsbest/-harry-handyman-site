@@ -4,6 +4,42 @@
 # Static HTML site — no build step needed.
 # The contact form uses Netlify Forms (data-netlify="true").
 
+# The home page is index.html, served at the bare root URL.
+# It used to live at "Harry Handyman Service.dc.html", which Netlify's
+# pretty-URL handling served as /harry%20handyman%20service.dc — that URL is
+# indexed, so 301 every spelling of it to the root.
+# The old file is still on disk as a fallback, so these need force = true to
+# take precedence over it.
+[[redirects]]
+  from = "/Harry Handyman Service.dc.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Harry%20Handyman%20Service.dc.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/harry handyman service.dc"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/harry%20handyman%20service.dc"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Harry Handyman Service.dc"
+  to = "/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
