@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Design-export working files, not site content.
+Disallow: /image-slots.state.json
+Disallow: /image-slot.js
+Disallow: /uploads/
+
+Sitemap: https://www.harryhandyman.com/sitemap.xml
