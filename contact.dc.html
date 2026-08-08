@@ -112,6 +112,13 @@
     footer ul li a{display:inline-block;padding:6px 0}
     /* lead with the heading, not the photo, where the grid opens a page */
     .hh-why-flip>div:first-child{order:2}
+    /* the form is the point of this page — put it right under the heading,
+       and push the call/WhatsApp/email list below it */
+    #contact{padding-top:38px !important;padding-bottom:54px !important}
+    .hh-contact-grid{row-gap:0}
+    .hh-contact-grid>div:first-child{display:contents}
+    .hh-contact-grid>form{order:2;margin-top:26px}
+    .hh-contact-grid>div:first-child>div:last-child{order:3}
   }
   @media(max-width:560px){
     .hh-wrap{padding-left:20px;padding-right:20px}
