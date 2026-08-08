@@ -110,6 +110,8 @@
     body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
     /* footer links were 18px tall — below a usable tap target */
     footer ul li a{display:inline-block;padding:6px 0}
+    /* lead with the heading, not the photo, where the grid opens a page */
+    .hh-why-flip>div:first-child{order:2}
   }
   @media(max-width:560px){
     .hh-wrap{padding-left:20px;padding-right:20px}

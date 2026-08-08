@@ -111,6 +111,8 @@
     body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
     /* footer links were 18px tall — below a usable tap target */
     footer ul li a{display:inline-block;padding:6px 0}
+    /* lead with the heading, not the photo, where the grid opens a page */
+    .hh-why-flip>div:first-child{order:2}
   }
   @media(max-width:560px){
     .hh-wrap{padding-left:20px;padding-right:20px}
@@ -267,7 +269,7 @@
 <!-- WHY HARRY -->
   <section id="team" style="background:#f5efe6;padding-top:76px;padding-bottom:80px">
     <div class="hh-wrap">
-      <div class="hh-why-grid">
+      <div class="hh-why-grid hh-why-flip">
         <div style="position:relative">
           <div style="position:absolute;top:-14px;left:-14px;width:60px;height:60px;border-top:3px solid #D06F2A;border-left:3px solid #D06F2A;z-index:2"></div>
           <div style="width:100%;height:440px;border-radius:5px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(28,28,30,0.18)"><image-slot id="harry-photo" shape="rect" placeholder="PHOTO OF HARRY — drop a portrait of Harry here"></image-slot></div>
