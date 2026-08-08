@@ -90,6 +90,13 @@
     body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
     /* footer links were 18px tall — below a usable tap target */
     footer ul li a{display:inline-block;padding:6px 0}
+    /* the bar floats over the bottom 64px, so it covered footer links and the
+       form's send button — give the footer its own clearance and slide the bar
+       out of the way whenever a form or the footer is on screen */
+    body{padding-bottom:0}
+    footer{padding-bottom:calc(34px + 74px + env(safe-area-inset-bottom,0px)) !important}
+    .hh-bottombar{transition:transform 0.22s ease}
+    .hh-bottombar.hh-bottombar-away{transform:translateY(115%);pointer-events:none}
     /* lead with the heading, not the photo, where the grid opens a page */
     .hh-why-flip>div:first-child{order:2}
   }
@@ -514,6 +521,41 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+/* The fixed CTA bar covers the bottom of the screen. Slide it away while an
+   enquiry form or the footer is in view so it never sits on top of a field or
+   a link. The page is rendered by the design runtime after load, so wait for
+   the bar to exist before wiring anything up. */
+(function () {
+  var AWAY = 'hh-bottombar-away';
+  function wire() {
+    var bar = document.querySelector('.hh-bottombar');
+    if (!bar) return false;
+    if (bar.getAttribute('data-hh-away') === '1') return true;
+    var marks = [].slice.call(document.querySelectorAll('form, footer'));
+    if (!marks.length) return false;
+    bar.setAttribute('data-hh-away', '1');
+    if (!('IntersectionObserver' in window)) return true;
+    var showing = 0;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var was = e.target.getAttribute('data-hh-seen') === '1';
+        if (e.isIntersecting === was) return;
+        e.target.setAttribute('data-hh-seen', e.isIntersecting ? '1' : '0');
+        showing += e.isIntersecting ? 1 : -1;
+      });
+      bar.classList.toggle(AWAY, showing > 0);
+    });
+    marks.forEach(function (el) { io.observe(el); });
+    return true;
+  }
+  if (!wire()) {
+    var mo = new MutationObserver(function () { if (wire()) mo.disconnect(); });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 15000);
+  }
+})();
 </script>
 </body>
 </html>
