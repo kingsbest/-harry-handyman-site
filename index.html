@@ -814,15 +814,25 @@ class Component extends DCLogic {
 <script>
 /* The fixed CTA bar covers the bottom of the screen. Slide it away while an
    enquiry form or the footer is in view so it never sits on top of a field or
-   a link. The page is rendered by the design runtime after load, so wait for
-   the bar to exist before wiring anything up. */
+   a link.
+
+   The design runtime parses this page's <x-dc> template into hidden DOM and
+   only later replaces it with the React-rendered copy, so an element found
+   early may be the hidden template — zero-sized, and never intersecting.
+   Ignore anything still inside <x-dc>, and keep waiting until the rendered
+   bar exists. */
 (function () {
   var AWAY = 'hh-bottombar-away';
+  function live(sel) {
+    return [].slice.call(document.querySelectorAll(sel)).filter(function (el) {
+      return !(el.closest && el.closest('x-dc'));
+    });
+  }
   function wire() {
-    var bar = document.querySelector('.hh-bottombar');
+    var bar = live('.hh-bottombar')[0];
     if (!bar) return false;
     if (bar.getAttribute('data-hh-away') === '1') return true;
-    var marks = [].slice.call(document.querySelectorAll('form, footer'));
+    var marks = live('form, footer');
     if (!marks.length) return false;
     bar.setAttribute('data-hh-away', '1');
     if (!('IntersectionObserver' in window)) return true;
