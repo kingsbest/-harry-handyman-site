@@ -15,8 +15,8 @@
 <body>
 <x-dc>
 <helmet>
-<title>About — Led by Kins, Backed by a Trusted Team | Harry Handyman Service</title>
-<meta name="description" content="Harry Handyman is led by Kins and backed by a reliable multi-trade team across South West Wales — direct communication, rapid turnaround and no weeks-long waitlist.">
+<title>About — Led by Kins Harry, Backed by a Trusted Team | Harry Handyman Service</title>
+<meta name="description" content="Harry Handyman is led by Kins Harry, a chartered engineer, and backed by a reliable multi-trade team across South West Wales — engineer-led standards, direct communication and no weeks-long waitlist.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -43,6 +43,8 @@
   .hh-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .hh-why-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:52px;align-items:center}
   .hh-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .hh-serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .hh-about-points{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px;max-width:1000px;margin:22px auto 0}
   .hh-tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .hh-contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:52px;align-items:start}
   .hh-promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -60,6 +62,8 @@
     .hh-services-grid{grid-template-columns:repeat(2,1fr)}
     .hh-services-grid5{grid-template-columns:repeat(3,1fr)}
     .hh-reviews-grid{grid-template-columns:1fr}
+    .hh-serve-grid{grid-template-columns:repeat(2,1fr)}
+    .hh-about-points{grid-template-columns:1fr;gap:20px}
     .hh-tips-grid{grid-template-columns:1fr}
     .hh-footer-grid{grid-template-columns:1fr 1fr}
     .hh-footer-photo{grid-column:1 / -1;max-width:340px;margin-left:auto;margin-right:auto}
@@ -78,6 +82,7 @@
     .hh-areas-grid{grid-template-columns:1fr;gap:28px}
     .hh-area-map-grid{grid-template-columns:1fr;gap:34px}
     .hh-form-row{grid-template-columns:1fr}
+    .hh-serve-grid{grid-template-columns:1fr}
     .hh-promise-grid{grid-template-columns:1fr}
   }
 
@@ -147,6 +152,12 @@
   "email": "hello@harryhandyman.com",
   "image": "https://harryhandyman.com/uploads/Harry-logo.png",
   "logo": "https://harryhandyman.com/uploads/Harry-logo.png",
+  "founder": {
+    "@type": "Person",
+    "name": "Kins Harry",
+    "jobTitle": "Founder",
+    "description": "Chartered engineer (BEng, MEng) who consults on mission-critical systems and founded Harry Handyman to bring the same standards to people's homes."
+  },
   "priceRange": "££",
   "currenciesAccepted": "GBP",
   "address": {
@@ -284,38 +295,55 @@
     </div>
   </section>
 
-<!-- WHY KINS -->
-  <section id="team" style="background:#f5efe6;padding-top:76px;padding-bottom:80px">
+<!-- MEET KINS -->
+  <section id="meet-kins" style="background:#e3cfb4;padding-top:76px;padding-bottom:80px">
     <div class="hh-wrap">
       <div class="hh-why-grid hh-why-flip">
         <div style="position:relative">
           <div style="position:absolute;top:-14px;left:-14px;width:60px;height:60px;border-top:3px solid #D06F2A;border-left:3px solid #D06F2A;z-index:2"></div>
-          <div style="width:100%;height:440px;border-radius:5px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(28,28,30,0.18)"><image-slot id="harry-photo" shape="rect" placeholder="PHOTO OF KINS — drop a portrait here"></image-slot></div>
+          <div style="width:100%;height:440px;border-radius:5px;overflow:hidden;position:relative;box-shadow:0 18px 40px rgba(28,28,30,0.18)"><image-slot id="harry-photo" shape="rect" placeholder="PHOTO OF KINS ON SITE — approachable, tools in hand"></image-slot></div>
+          <p style="font-size:14.5px;line-height:1.5;color:#5a4d38;font-style:italic;margin-top:12px">Kins Harry, founder — the person behind every Harry Handyman job.</p>
         </div>
         <div>
-          <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D06F2A;margin-bottom:14px">The personal touch, scaled up</div>
-          <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;text-transform:uppercase;color:#34363a">Led by Kins. Backed by a trusted team.</h2>
-          <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:18px;max-width:520px">When you work with us, you deal directly with Kins. That means clear communication, expert oversight, and a personal commitment to your project from start to finish. And because Kins is backed by a reliable, multi-trade team, we have the manpower to take on larger jobs without the usual bottlenecks.</p>
-          <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:14px;max-width:520px">From custom carpentry and outbuilding restorations to complex multi-trade repairs, no job is too big — and nothing sits on a waitlist for weeks.</p>
-          <h3 style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-top:34px">Why choose us</h3>
-          <div style="display:flex;flex-direction:column;gap:20px;margin-top:18px">
-            <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
-              <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Direct communication</h4><p style="font-size:15px;color:#5a5c61;margin-top:3px">You talk to Kins. Straightforward answers, transparent pricing, no corporate runaround.</p></div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
-              <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Multi-trade expertise</h4><p style="font-size:15px;color:#5a5c61;margin-top:3px">We handle the overlapping jobs, like combining carpentry and electrical finishing, so you don't have to juggle contractors.</p></div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"></path></svg></div>
-              <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Rapid turnaround</h4><p style="font-size:15px;color:#5a5c61;margin-top:3px">Our team structure means we get your project booked in and sorted out quickly.</p></div>
-            </div>
-            <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg></div>
-              <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Uncompromising quality</h4><p style="font-size:15px;color:#5a5c61;margin-top:3px">Every job, from hanging a single door to full structural repairs, is completed to strict professional standards.</p></div>
-            </div>
-          </div>
+          <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-bottom:14px">The founder</div>
+          <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;text-transform:uppercase;color:#34363a">Meet Kins</h2>
+          <p style="font-size:18px;line-height:1.6;color:#4a4031;margin-top:18px;max-width:560px">I'm a chartered engineer, with a BEng and an MEng, and I spend my days consulting on mission-critical systems — the kind where failure simply isn't an option. I've worked with major names in power and industrial engineering, and helped develop products that are on the market today.</p>
+          <p style="font-family:Barlow Condensed,sans-serif;font-size:23px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:#B0603F;margin-top:22px">So why the toolbox?</p>
+          <p style="font-size:18px;line-height:1.6;color:#4a4031;margin-top:10px;max-width:560px">I bought an old house and rarely had to worry about it. But friends and family kept calling me round to their brand-new builds — cracks showing up weeks after moving in, carpets that cover the floor but don't protect it, kitchens and balconies in awkward spots, bathrooms that were never sealed properly, sharp cabinet edges in homes full of young children. The same story, home after home: either the builder had missed something, or the buyer had been sold a place that didn't quite fit their life.</p>
+          <p style="font-size:18px;line-height:1.6;color:#4a4031;margin-top:14px;max-width:560px">It frustrated me that a bit of care and the right eye would have prevented all of it. So I started Harry Handyman — to bring the standard I hold in mission-critical engineering to the homes people actually live in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hh-ruler"></div>
+
+<!-- THE PERSONAL TOUCH, SCALED UP -->
+  <section id="team" style="background:#f5efe6;padding-top:76px;padding-bottom:80px">
+    <div class="hh-wrap">
+      <div style="text-align:center;max-width:760px;margin:0 auto">
+        <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D06F2A;margin-bottom:14px">The personal touch, scaled up</div>
+        <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;text-transform:uppercase;color:#34363a">Led by Kins. Backed by a trusted team.</h2>
+        <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:18px">When you work with us, you deal directly with Kins. That means clear communication, expert oversight, and a personal commitment to your project from start to finish. And because Kins is backed by a reliable, multi-trade team, we have the manpower to take on larger jobs without the usual bottlenecks.</p>
+        <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:14px">From custom carpentry and outbuilding restorations to complex multi-trade repairs, no job is too big — and nothing sits on a waitlist for weeks.</p>
+        <h3 style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-top:40px">Why choose us</h3>
+      </div>
+      <div class="hh-about-points">
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+          <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Direct communication</h4><p style="font-size:15px;line-height:1.55;color:#5a5c61;margin-top:3px">You deal with Kins, from first call to final check. Straightforward answers, transparent pricing, no corporate runaround.</p></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"></path></svg></div>
+          <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Engineer-led standards</h4><p style="font-size:15px;line-height:1.55;color:#5a5c61;margin-top:3px">Every job gets a chartered engineer's eye. We diagnose before we fix, and we don't cut corners.</p></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+          <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Multi-trade expertise</h4><p style="font-size:15px;line-height:1.55;color:#5a5c61;margin-top:3px">We handle the overlapping jobs, like combining carpentry and electrical finishing, so you don't have to juggle contractors.</p></div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:none;width:44px;height:44px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="3.2"></circle><path d="M17 4.2a3.2 3.2 0 0 1 0 6"></path><path d="M22 20v-2a3.6 3.6 0 0 0-2.6-3.4"></path></svg></div>
+          <div><h4 style="font-family:Barlow Condensed,sans-serif;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Backed by a trusted team</h4><p style="font-size:15px;line-height:1.55;color:#5a5c61;margin-top:3px">The personal touch of an owner-run business, with the manpower to avoid the usual bottlenecks.</p></div>
         </div>
       </div>
     </div>
@@ -329,9 +357,14 @@
       <div style="text-align:center;max-width:700px;margin:0 auto 38px">
         <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-bottom:12px">Our customers</div>
         <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(34px,4.6vw,52px);line-height:1;text-transform:uppercase;color:#34363a">Who we serve</h2>
-        <p style="font-size:18px;line-height:1.55;color:#5a4d38;margin-top:16px">Homeowner needing a quick repair, landlord updating a space, or property manager after a reliable maintenance partner on speed dial — we've got the skills and the team to handle it.</p>
+        <p style="font-size:18px;line-height:1.55;color:#5a4d38;margin-top:16px">New-build owner chasing down snags the developer left behind, homeowner needing a quick repair, landlord updating a space, or property manager after a reliable maintenance partner on speed dial — we've got the skills and the team to handle it.</p>
       </div>
-      <div class="hh-reviews-grid">
+      <div class="hh-serve-grid">
+        <div style="background:#f5efe6;border-radius:6px;padding:30px 28px;box-shadow:0 10px 26px rgba(28,28,30,0.1)">
+          <div style="width:46px;height:46px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.8-3.8"></path></svg></div>
+          <h3 style="font-family:Barlow Condensed,sans-serif;font-size:21px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">New-build owners</h3>
+          <p style="font-size:16px;line-height:1.55;color:#5a5c61;margin-top:6px">Snags the developer left behind — cracks, seals, sharp edges, finishes that were never right. Spotted properly and put right.</p>
+        </div>
         <div style="background:#f5efe6;border-radius:6px;padding:30px 28px;box-shadow:0 10px 26px rgba(28,28,30,0.1)">
           <div style="width:46px;height:46px;border-radius:5px;background:#34363a;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="#D06F2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.6V21h14V9.6"></path></svg></div>
           <h3 style="font-family:Barlow Condensed,sans-serif;font-size:21px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;color:#1c1c1e">Homeowners</h3>
