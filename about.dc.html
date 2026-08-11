@@ -45,6 +45,12 @@
   .hh-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .hh-serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .hh-about-points{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px;max-width:1000px;margin:22px auto 0}
+  .hh-crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;max-width:1180px;margin:46px auto 0}
+  /* double frame: thick charcoal border, then a hairline rule inset inside it */
+  .hh-crew-frame{position:relative;border:14px solid #34363a;background:#34363a;box-shadow:0 14px 32px rgba(28,28,30,0.16)}
+  .hh-crew-frame::after{content:"";position:absolute;inset:10px;border:1px solid rgba(245,239,230,0.9);pointer-events:none;z-index:3}
+  .hh-crew-photo{position:relative;aspect-ratio:4/5;overflow:hidden}
+  .hh-crew-photo image-slot{position:absolute;inset:0;width:100%;height:100%}
   .hh-tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .hh-contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:52px;align-items:start}
   .hh-promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -64,6 +70,7 @@
     .hh-reviews-grid{grid-template-columns:1fr}
     .hh-serve-grid{grid-template-columns:repeat(2,1fr)}
     .hh-about-points{grid-template-columns:1fr;gap:20px}
+    .hh-crew-grid{grid-template-columns:repeat(2,1fr);gap:34px}
     .hh-tips-grid{grid-template-columns:1fr}
     .hh-footer-grid{grid-template-columns:1fr 1fr}
     .hh-footer-photo{grid-column:1 / -1;max-width:340px;margin-left:auto;margin-right:auto}
@@ -84,6 +91,9 @@
     .hh-form-row{grid-template-columns:1fr}
     .hh-serve-grid{grid-template-columns:1fr}
     .hh-promise-grid{grid-template-columns:1fr}
+    .hh-crew-grid{grid-template-columns:1fr;gap:38px;max-width:400px}
+    .hh-crew-frame{border-width:10px}
+    .hh-crew-frame::after{inset:7px}
   }
 
   .hh-drop{position:relative}
@@ -318,15 +328,45 @@
 
   <div class="hh-ruler"></div>
 
-<!-- THE PERSONAL TOUCH, SCALED UP -->
+<!-- MEET YOUR CARMARTHENSHIRE HANDYMAN -->
   <section id="team" style="background:#f5efe6;padding-top:76px;padding-bottom:80px">
     <div class="hh-wrap">
       <div style="text-align:center;max-width:760px;margin:0 auto">
-        <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D06F2A;margin-bottom:14px">The personal touch, scaled up</div>
-        <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;text-transform:uppercase;color:#34363a">Led by Kins. Backed by a trusted team.</h2>
-        <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:18px">When you work with us, you deal directly with Kins. That means clear communication, expert oversight, and a personal commitment to your project from start to finish. And because Kins is backed by a reliable, multi-trade team, we have the manpower to take on larger jobs without the usual bottlenecks.</p>
-        <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:14px">From custom carpentry and outbuilding restorations to complex multi-trade repairs, no job is too big — and nothing sits on a waitlist for weeks.</p>
-        <h3 style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-top:40px">Why choose us</h3>
+        <div style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D06F2A;margin-bottom:14px">Your local crew</div>
+        <h2 style="font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;text-transform:uppercase;color:#34363a">Meet Your Carmarthenshire Handyman</h2>
+        <p style="font-size:18px;line-height:1.55;color:#45484d;margin-top:18px;max-width:60ch;margin-left:auto;margin-right:auto">You deal directly with Kins — and behind him is a small, multi-trade crew who turn up in the same workwear, to the same standard. That's the personal touch of an owner-run business with the manpower to take on the bigger jobs, so nothing sits on a waitlist for weeks.</p>
+        <div class="hh-ticks" style="color:#D06F2A;margin:26px auto 0;max-width:340px;height:16px"></div>
+      </div>
+
+      <div class="hh-crew-grid">
+        <div>
+          <div class="hh-crew-frame">
+            <div class="hh-crew-photo"><image-slot id="crew-josh" shape="rect" fit="cover" placeholder="PORTRAIT OF JOSH — on site, branded workwear, chest logo visible"></image-slot></div>
+          </div>
+          <h3 style="font-family:Anton,sans-serif;font-weight:400;font-size:27px;line-height:1.05;letter-spacing:0.01em;text-transform:uppercase;color:#D06F2A;text-align:center;margin-top:20px">Josh</h3>
+          <div style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#34363a;text-align:center;margin-top:5px">Field technician · Roofer &amp; estimator</div>
+          <p style="font-size:15.5px;line-height:1.55;color:#5a5c61;text-align:center;margin-top:10px">Usually the first out to see the job — up on the roof, into the loft, and back to you with an honest estimate before any work starts.</p>
+        </div>
+        <div>
+          <div class="hh-crew-frame">
+            <div class="hh-crew-photo"><image-slot id="crew-sophie" shape="rect" fit="cover" placeholder="PORTRAIT OF SOPHIE — same setting and lighting as Josh, branded workwear"></image-slot></div>
+          </div>
+          <h3 style="font-family:Anton,sans-serif;font-weight:400;font-size:27px;line-height:1.05;letter-spacing:0.01em;text-transform:uppercase;color:#D06F2A;text-align:center;margin-top:20px">Sophie</h3>
+          <div style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#34363a;text-align:center;margin-top:5px">Decorating specialist · Sales &amp; scheduling</div>
+          <p style="font-size:15.5px;line-height:1.55;color:#5a5c61;text-align:center;margin-top:10px">Our decorator, and the voice on the end of the phone — she books the work in and keeps the finish tight right through to the final check.</p>
+        </div>
+        <div>
+          <div class="hh-crew-frame">
+            <div class="hh-crew-photo"><image-slot id="crew-mark" shape="rect" fit="cover" placeholder="PORTRAIT OF MARK — same setting and lighting as Josh, branded workwear"></image-slot></div>
+          </div>
+          <h3 style="font-family:Anton,sans-serif;font-weight:400;font-size:27px;line-height:1.05;letter-spacing:0.01em;text-transform:uppercase;color:#D06F2A;text-align:center;margin-top:20px">Mark</h3>
+          <div style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#34363a;text-align:center;margin-top:5px">Builder · Project manager</div>
+          <p style="font-size:15.5px;line-height:1.55;color:#5a5c61;text-align:center;margin-top:10px">Runs the bigger multi-trade jobs — building work of his own, and every other trade kept in the right order so the job doesn't stall.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;max-width:760px;margin:0 auto">
+        <h3 style="font-family:Barlow Condensed,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#B0603F;margin-top:56px">Why choose us</h3>
       </div>
       <div class="hh-about-points">
         <div style="display:flex;gap:16px;align-items:flex-start">
