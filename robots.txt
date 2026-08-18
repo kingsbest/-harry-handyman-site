@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-# Design-export working files, not site content.
-Disallow: /image-slots.state.json
-Disallow: /image-slot.js
-Disallow: /uploads/
+# Every site image (logo, hero, crew photos, service icons) is served from
+# /uploads/, and image-slot.js + its state file are what populate the image
+# slots at render time. Googlebot needs all of it to see the page as visitors
+# do, so nothing here is disallowed.
 
 Sitemap: https://www.harryhandyman.com/sitemap.xml
