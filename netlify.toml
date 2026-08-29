@@ -40,6 +40,94 @@
   status = 301
   force = true
 
+# ---------------------------------------------------------------------------
+# London & North Kent section
+# ---------------------------------------------------------------------------
+# Pages live in /london/ as real files, so Netlify's pretty-URL handling serves
+# london/handyman-services.html at /london/handyman-services. No rewrite needed
+# for the canonical URLs — only the alias and the reserved routes below.
+
+# Alias: /london/airbnb-services is an alternate name for the short-let content.
+# The short-let vertical index is not built yet, so the alias points at the one
+# short-let page that exists. Retarget to /london/short-let-services when built.
+[[redirects]]
+  from = "/london/airbnb-services"
+  to = "/london/short-let-services/wellness-check"
+  status = 301
+
+# Reserved routes — pages that are planned but not built. These 404 cleanly
+# rather than falling through to another route. Replace each with a real file
+# (or delete the rule) as the page ships.
+[[redirects]]
+  from = "/london/renovations"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/short-let-services"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/dartford"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/greenwich"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/bexley"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/bromley"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/ebbsfleet"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/lewisham"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/southwark"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/lambeth"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/gravesend"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/northfleet"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/bexleyheath"
+  to = "/404-london.html"
+  status = 404
+
+[[redirects]]
+  from = "/london/sidcup"
+  to = "/404-london.html"
+  status = 404
+
 # Netlify has no built-in MIME type for .webmanifest and falls back to
 # application/octet-stream, which the spec disallows. Combined with the
 # nosniff header below, that stops the manifest being applied.

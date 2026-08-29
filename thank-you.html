@@ -53,7 +53,7 @@
   .hh-ticks{height:26px;background-repeat:repeat-x,repeat-x;background-size:100% 11px,100% 22px;background-position:bottom left,bottom left;background-image:repeating-linear-gradient(90deg,currentColor 0 1.5px,transparent 1.5px 18px),repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 90px)}
   .hh-ruler{height:36px;background-color:#34363a;background-repeat:no-repeat,repeat-x,repeat-x;background-size:100% 2px,100% 12px,100% 24px;background-position:top left,top left,top left;background-image:linear-gradient(#e3cfb4,#e3cfb4),repeating-linear-gradient(90deg,#e3cfb4 0 1.5px,transparent 1.5px 22px),repeating-linear-gradient(90deg,#e3cfb4 0 2px,transparent 2px 110px)}
   .hh-nav-links{display:flex;gap:28px;align-items:center}
-  .hh-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr 1fr 1.15fr;gap:36px;align-items:start}
+  .hh-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.1fr 1.05fr 1fr 1.15fr;gap:36px;align-items:start}
   .hh-menu-btn{display:none}
   .hh-mobile-menu{display:none}
   .hh-bottombar{display:none}
@@ -258,6 +258,7 @@
           <div class="hh-drop"><a href="areas.dc.html" style="color:#f5efe6;font-family:Barlow Condensed,sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">Areas <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="areas.dc.html#carmarthenshire">Carmarthenshire</a><a href="areas.dc.html#swansea-gower">Swansea &amp; Gower</a><a href="areas.dc.html#pembrokeshire">Pembrokeshire</a></div></div>
           <div class="hh-drop"><a href="about.dc.html" style="color:#f5efe6;font-family:Barlow Condensed,sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">About <span style="font-size:10px;opacity:0.8">&#9662;</span></a><div class="hh-drop-menu"><a href="about.dc.html#team">Why Harry &amp; Our Team</a><a href="about.dc.html#reviews">Reviews</a><a href="faq.dc.html">FAQ</a></div></div>
           <a href="tips.dc.html" style="color:#f5efe6;font-family:Barlow Condensed,sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer" style-hover="color:#D06F2A">Tips</a>
+          <div class="hh-drop"><a href="/london" style="color:#f5efe6;font-family:Barlow Condensed,sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">London <span style="font-size:10px;opacity:0.8">▾</span></a><div class="hh-drop-menu"><a href="/london">London &amp; North Kent — overview</a><a href="/london/handyman-services">Handyman Services</a><a href="/london/landlord-services">Landlord &amp; HMO Services</a><a href="/london/short-let-services/wellness-check">Short-Let &amp; Airbnb</a><a href="/london/renters-rights">Renters&rsquo; Rights</a><a href="contact.dc.html">Renovations · coming soon</a></div></div>
           <a href="contact.dc.html" style="background:#D06F2A;color:#1c1c1e;padding:12px 24px;border-radius:3px;font-family:Barlow Condensed,sans-serif;font-weight:700;font-size:16.5px;letter-spacing:0.03em;text-transform:uppercase" style-hover="background:#B85A1E">Contact Us</a>
         </nav>
         <button class="hh-menu-btn" onClick="{{ toggleMenu }}" aria-label="Menu" style="background:#45484d;border:none;width:46px;height:46px;border-radius:4px;cursor:pointer;align-items:center;justify-content:center">
@@ -306,6 +307,17 @@
           </div>
         </div>
           <a href="tips.dc.html" onClick="{{ closeMenu }}" style="color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12)">Tips</a>
+          <div>
+          <div onClick="{{ toggleLondon }}" style="display:flex;justify-content:space-between;align-items:center;color:#f5efe6;padding:11px 0;border-bottom:1px solid rgba(245,239,230,0.12);cursor:pointer">London<span style="font-size:12px">▾</span></div>
+          <div class="hh-msub {{ mobLondonClass }}">
+            <a href="/london" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">London &amp; North Kent — overview</a>
+            <a href="/london/handyman-services" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Handyman Services</a>
+            <a href="/london/landlord-services" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Landlord &amp; HMO Services</a>
+            <a href="/london/short-let-services/wellness-check" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Short-Let &amp; Airbnb</a>
+            <a href="/london/renters-rights" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Renters&rsquo; Rights</a>
+            <a href="contact.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Renovations · coming soon</a>
+          </div>
+        </div>
           <a href="contact.dc.html" onClick="{{ closeMenu }}" style="background:#D06F2A;color:#1c1c1e;padding:13px 0;border-radius:3px;text-align:center;margin-top:12px">Contact Us</a>
         </div>
       </div>
@@ -399,12 +411,27 @@
           </ul>
         </div>
         <div>
+          <h4 style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f5efe6;margin-bottom:16px">London &amp; North Kent</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px">
+            <li><a href="/london/handyman-services" style="color:#a7a29a">Handyman Services</a></li>
+            <li><a href="/london/landlord-services" style="color:#a7a29a">Landlord &amp; HMO Services</a></li>
+            <li><a href="/london/short-let-services/wellness-check" style="color:#a7a29a">Short-Let &amp; Airbnb</a></li>
+            <li><a href="/london/renters-rights" style="color:#a7a29a">Renters&rsquo; Rights</a></li>
+            <li><a href="/contact.dc.html" style="color:#a7a29a">Renovations · coming soon</a></li>
+            <li style="margin-top:6px"><a href="/london" style="color:#D06F2A;font-weight:600">All London services →</a></li>
+          </ul>
+        </div>
+        <div>
           <h4 style="font-family:Barlow Condensed,sans-serif;font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#f5efe6;margin-bottom:16px">Contact</h4>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px">
+            <li style="font-family:Barlow Condensed,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e3cfb4;margin-bottom:2px">South West Wales</li>
+            <li style="color:#a7a29a">Carmarthenshire</li>
             <li><a href="tel:+447570012301" style="color:#a7a29a">07570 012301</a></li>
-            <li><a href="https://wa.me/447570012301" style="color:#a7a29a">WhatsApp: 07570 012301</a></li>
+            <li style="margin-top:12px;font-family:Barlow Condensed,sans-serif;font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#e3cfb4;margin-bottom:2px">London &amp; North Kent</li>
+            <li style="color:#a7a29a">Ebbsfleet · Kent</li>
+            <li style="color:#a7a29a">London line: [LONDON NUMBER]</li>
+            <li style="margin-top:12px"><a href="https://wa.me/447570012301" style="color:#a7a29a">WhatsApp: 07570 012301</a></li>
             <li><a href="mailto:hello@harryhandyman.com" style="color:#a7a29a">hello@harryhandyman.com</a></li>
-            <li style="color:#a7a29a">Carmarthenshire · South West Wales</li>
             <li><a href="https://harryhandyman.com" style="color:#D06F2A;font-weight:600">harryhandyman.com</a></li>
           </ul>
         </div>
@@ -456,6 +483,8 @@ class Component extends DCLogic {
       menuClass:this.state.menuOpen?'open':'',
       toggleMenu:()=>this.setState(s=>({menuOpen:!s.menuOpen})),
       closeMenu:()=>this.setState({menuOpen:false}),
+      toggleLondon:()=>this._td('london'),
+      mobLondonClass:this.state.drop.london?'open':'',
       toggleHandyman:()=>this._td('handyman'),
       toggleReno:()=>this._td('reno'),
       toggleAreas:()=>this._td('areas'),

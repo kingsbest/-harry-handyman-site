@@ -89,6 +89,11 @@
 
 (() => {
   const STATE_FILE = 'image-slots.state.json';
+  // Read the sidecar from the site root: pages served from a
+  // subdirectory (e.g. /london/handyman-services) would otherwise
+  // resolve this relative to their own folder and 404. The write path
+  // below keeps the bare repo-relative name the editor host expects.
+  const STATE_URL = '/image-slots.state.json';
 
   // Unsplash terms require visible attribution wherever their photos
   // display, and every link back to unsplash.com must carry utm referral
@@ -168,7 +173,7 @@
 
   function load() {
     if (loadP) return loadP;
-    loadP = fetch(STATE_FILE)
+    loadP = fetch(STATE_URL)
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {
         // Merge: sidecar loses to any in-memory change that raced ahead of
