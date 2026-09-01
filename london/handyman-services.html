@@ -61,7 +61,7 @@
   @media(max-width:980px){
     .hh-nav-links{display:none}
     .hh-menu-btn{display:flex}
-    .hh-why-grid{grid-template-columns:1fr;gap:30px}
+    .hh-why-grid{grid-template-columns:minmax(0,1fr);gap:30px}
     .hh-price-grid{grid-template-columns:repeat(2,1fr)}
     .hh-steps-grid{grid-template-columns:1fr}
     .hh-promise-grid{grid-template-columns:1fr}
@@ -301,7 +301,7 @@
       <div class="hh-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px">
         <a href="/" style="display:flex;align-items:center"><img src="/uploads/Harry-logo-transparent.png" alt="Harry Handyman Service" style="height:60px;width:auto"></a>
         <nav class="hh-nav-links">
-          <div class="hh-drop"><a href="/london" style="color:#D06F2A;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">London <span style="font-size:10px;opacity:0.8">▾</span></a><div class="hh-drop-menu"><a href="/london">London &amp; North Kent — overview</a><a href="/london/handyman-services">Handyman Services</a><a href="/london/landlord-services">Landlord &amp; HMO Services</a><a href="/london/short-let-services/wellness-check">Short-Let &amp; Airbnb</a><a href="/london/renters-rights">Renters&rsquo; Rights</a><a href="/contact.dc.html">Renovations · coming soon</a></div></div>
+          <div class="hh-drop"><a href="/london" style="color:#D06F2A;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">London <span style="font-size:10px;opacity:0.8">▾</span></a><div class="hh-drop-menu"><a href="/london">London &amp; North Kent — overview</a><a href="/london/handyman-services">Handyman Services</a><a href="/london/landlord-services">Landlord &amp; HMO Services</a><a href="/london/short-let-services/wellness-check">AirBnB Maintenance Inspection</a><a href="/london/renters-rights">Renters&rsquo; Rights</a><a href="/contact.dc.html">Renovations · coming soon</a></div></div>
           <div class="hh-drop"><a href="/handyman-services.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;cursor:pointer">Handyman Services <span style="font-size:10px;opacity:0.8">▾</span></a><div class="hh-drop-menu"><a href="/handyman-services.dc.html#general-repairs">General Repairs</a><a href="/handyman-services.dc.html#carpentry">Carpentry &amp; Joinery</a><a href="/handyman-services.dc.html#painting">Painting &amp; Decorating</a><a href="/handyman-services.dc.html#plumbing">Plumbing</a><a href="/handyman-services.dc.html#tiling">Tiling &amp; Flooring</a><a href="/handyman-services.dc.html#flatpack">Flat-pack &amp; Mounting</a><a href="/handyman-services.dc.html#maintenance">Property Maintenance</a></div></div>
           <a href="/renovations.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase" style-hover="color:#D06F2A">Renovations</a>
           <a href="/our-work.dc.html" style="color:#f5efe6;font-family:'Barlow Condensed',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase" style-hover="color:#D06F2A">Our Work</a>
@@ -321,7 +321,7 @@
               <a href="/london" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">London &amp; North Kent — overview</a>
               <a href="/london/handyman-services" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Handyman Services</a>
               <a href="/london/landlord-services" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Landlord &amp; HMO Services</a>
-              <a href="/london/short-let-services/wellness-check" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Short-Let &amp; Airbnb</a>
+              <a href="/london/short-let-services/wellness-check" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">AirBnB Maintenance Inspection</a>
               <a href="/london/renters-rights" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Renters&rsquo; Rights</a>
               <a href="/contact.dc.html" onClick="{{ closeMenu }}" style="display:block;color:#c9c3b8;padding:8px 0;font-size:16px">Renovations · coming soon</a>
             </div>
@@ -348,17 +348,6 @@
       </ol>
     </div>
   </nav>
-
-<!-- BREADCRUMB -->
-  <div style="background:#f5efe6;border-bottom:1px solid rgba(28,28,30,0.08)">
-    <div class="hh-wrap" style="display:flex;gap:9px;align-items:center;padding-top:13px;padding-bottom:13px;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;color:#7a7c80">
-      <a href="/" style="color:#7a7c80">Home</a>
-      <span>/</span>
-      <a href="/london/handyman-services" style="color:#7a7c80">London</a>
-      <span>/</span>
-      <span style="color:#34363a;font-weight:600">Handyman Services</span>
-    </div>
-  </div>
 
 <!-- 1. HERO -->
   <section style="position:relative;background:#34363a;min-height:600px;display:flex;align-items:flex-end;overflow:hidden">
@@ -762,8 +751,8 @@
         </a>
         <a href="/london/short-let-services/wellness-check" class="hh-hub-card" style="display:block;background:#ffffff;border:1px solid #E6E1D8;border-top:3px solid #D06F2A;border-radius:4px;padding:26px 24px 22px">
           <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#D06F2A;margin-bottom:9px">For short-let hosts</div>
-          <h3 style="font-family:'Anton',sans-serif;font-weight:400;font-size:23px;line-height:1.12;text-transform:uppercase;color:#34363a">Short-Let &amp; Airbnb</h3>
-          <p style="font-size:15.5px;line-height:1.6;color:#5a5c61;margin-top:10px">Between-guest wellness checks with a photo report sent before your next guest checks in.</p>
+          <h3 style="font-family:'Anton',sans-serif;font-weight:400;font-size:23px;line-height:1.12;text-transform:uppercase;color:#34363a">Short-Let &amp; AirBnB</h3>
+          <p style="font-size:15.5px;line-height:1.6;color:#5a5c61;margin-top:10px">Between-guest maintenance inspections with a photo report sent before your next guest checks in.</p>
           <span style="display:inline-block;margin-top:14px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#D06F2A">Find out more →</span>
         </a>
         <a href="/london/renters-rights" class="hh-hub-card" style="display:block;background:#ffffff;border:1px solid #E6E1D8;border-top:3px solid #D06F2A;border-radius:4px;padding:26px 24px 22px">
@@ -806,7 +795,7 @@
             <li><a href="/london" style="color:#a7a29a">London &amp; North Kent overview</a></li>
             <li><a href="/london/handyman-services" style="color:#a7a29a">Handyman Services</a></li>
             <li><a href="/london/landlord-services" style="color:#a7a29a">Landlord &amp; HMO Services</a></li>
-            <li><a href="/london/short-let-services/wellness-check" style="color:#a7a29a">Short-Let &amp; Airbnb</a></li>
+            <li><a href="/london/short-let-services/wellness-check" style="color:#a7a29a">AirBnB Maintenance Inspection</a></li>
             <li><a href="/london/renters-rights" style="color:#a7a29a">Renters&rsquo; Rights</a></li>
             <li><a href="/contact.dc.html" style="color:#a7a29a">Renovations · coming soon</a></li>
           </ul>
